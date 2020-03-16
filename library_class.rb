@@ -33,6 +33,12 @@ attr_writer:books, :library
     end
 #create a method that changes the rental details by taking in the title of the book,
 #the student renting it and the date its due to be returned
-
-
+    def rental_updater(book_name,renter,return_date)
+        for book in @books
+            if book[:title] == book_name
+                book[:rental_details][:student_name] = renter
+                book[:rental_details][:date] = return_date
+            end
+        end
+    end
 end
