@@ -1,15 +1,15 @@
 class LibraryClass
 
-attr_writer :books, :library
+attr_writer:books, :library
 
-    def initialize(library_name)
+    def initialize(library_name,books)
         @library = library_name
-        @books = {}
+        @books = books
 
     end
 
     def get_books
-        return @books.title
+        return @books
     end
 #create a getter for the books
 #create a method that takes in a book title and retuns all assosiated information
