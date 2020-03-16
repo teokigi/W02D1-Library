@@ -1,17 +1,13 @@
 class LibraryClass
 
+attr_writer :books, :library
+
     def initialize(library_name)
         @library = library_name
-        @books = {
-                title: "null",
-                rental_details:{
-                    student_name: "null",
-                    date:"null"
-                }
-        }
+        @books = {}
 
     end
 
-    
+
 
 end
