@@ -24,7 +24,19 @@ class TestLibraryClass < MiniTest::Test
                                     }
                                 },@tokyo_library.get_books)
     end
-    #create a test for method that takes in a book title and retuns all assosiated information
+    #create a test for method that takes in a book title and retuns all associated information
+    def test_002_get_all_info_of_1_book
+        assert_equal({title: "lord_of_the_rings",
+                                rental_details:{
+                                    student_name: "jeff",
+                                    date: "01/12/16"
+                                    }
+                                },@tokyo_library.lookup_book("lord_of_the_rings"))
+                            end
+
+    def test_002_get_all_info_of_1_book_fail
+        assert_equal(nil,@tokyo_library.lookup_book("harry_potter"))
+    end
     #create a test for method that takes in a book title and adds it to book list
     #student names and date are empty strings
     #create a test for method that changes the rental details by taking in the title of the book,

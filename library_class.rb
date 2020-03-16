@@ -7,12 +7,16 @@ attr_writer:books, :library
         @books = books
 
     end
-
+    #create a getter for the books
     def get_books
         return @books
     end
-#create a getter for the books
-#create a method that takes in a book title and retuns all assosiated information
+
+
+
+    #create a method that takes in a book title and retuns all assosiated information
+    def lookup_book
+    end
 #create a method that takes in a book title and adds it to book list
 #student names and date are empty strings
 #create a method that changes the rental details by taking in the title of the book,
