@@ -52,11 +52,19 @@ class TestLibraryClass < MiniTest::Test
         assert_equal(nil,@tokyo_library.lookup_book("harry_potter"))
     end
     #create a test for method that takes in a book title and adds it to book list
+    #student names and date are empty string
     def test_003_add_book
         @tokyo_library.add_book("globalism")
         assert_equal(4,@tokyo_library.get_books.length)
     end
-    #student names and date are empty strings
     #create a test for method that changes the rental details by taking in the title of the book,
     #the student renting it and the date its due to be returned
+    def test_004_rental_update
+        rental_update("lord_of_the_rings","jake","01/01/17")
+        assert_equal({title: "lord_of_the_rings",
+                                rental_details:{
+                                    student_name: "jake",
+                                    date: "01/01/17"
+                                    }}, @tokyo_library.lookup_book("lord_of_the_rings"))
+    end
 end

@@ -11,9 +11,6 @@ attr_writer:books, :library
     def get_books
         return @books
     end
-
-
-
     #create a method that takes in a book title and retuns all assosiated information
     def lookup_book(book_name)
         for book in @books
@@ -24,6 +21,7 @@ attr_writer:books, :library
         return nil
     end
 #create a method that takes in a book title and adds it to book list
+#student names and date are empty strings
     def add_book(book_name)
         new_book = {title: book_name,
                     rental_details:
@@ -33,7 +31,6 @@ attr_writer:books, :library
                     }
         @books.push(new_book)
     end
-#student names and date are empty strings
 #create a method that changes the rental details by taking in the title of the book,
 #the student renting it and the date its due to be returned
 
